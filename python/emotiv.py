@@ -265,7 +265,7 @@ class Emotiv(object):
                 with open(input[0] + "/manufacturer", 'r') as f:
                     manufacturer = f.readline()
                     f.close()
-                if "Emotiv Systems Inc." in manufacturer:
+                if "Emotiv Systems" in manufacturer:
                     with open(input[0] + "/serial", 'r') as f:
                         serial = f.readline().strip()
                         f.close()

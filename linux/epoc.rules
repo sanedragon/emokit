@@ -13,5 +13,5 @@ ATTR{manufacturer}=="Emotiv Systems Pty Ltd", ATTRS{product}=="Receiver Dongle L
 #SUBSYSTEM=="hidraw", ATTRS{idVendor}=="21a1", ATTRS{idProduct}=="0001", ATTRS{interface}=="Emotiv RAW DATA", NAME="eeg/encrypted%n", SYMLINK+="eeg/encrypted", MODE="0444", RUN +="decrypt_emotiv.sh consumer"
 
 #Research headset
-SUBSYSTEM=="hidraw", ATTRS{interface}=="Emotiv RAW DATA", NAME="eeg/encrypted%n", SYMLINK+="eeg/encrypted", MODE="0444", RUN +="decrypt_emotiv.sh research"
+SUBSYSTEM=="hidraw", ATTRS{interface}=="Emotiv RAW DATA", NAME="eeg/encrypted%n", SYMLINK+="eeg/encrypted", MODE="0666"
 

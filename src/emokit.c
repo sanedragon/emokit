@@ -146,14 +146,19 @@ int emokit_open(struct emokit_device* s, int device_vid, int device_pid, unsigne
 	devices = hid_enumerate(device_vid, device_pid);
 	
 	if (!devices) {
-		printf("No devices! vid: %d pid: %d index: %d\n", device_vid, device_pid, device_index);
+		printf("No devices! vid: %x pid: %x index: %d\n", device_vid, device_pid, device_index);
 	}
 
 	device_cur = devices;
 	while(device_cur) {
-		printf("%s\n",device_cur->path);
 		if(count == device_index) {
+			printf("Opening %s\n",device_cur->path);
 			s->_dev = hid_open_path(device_cur->path);
+			if(!s->_dev) {
+				printf("Failed.\n");
+			} else {
+				printf("Success!");
+			}
 			break;
 		}
 		++count;

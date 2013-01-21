@@ -41,7 +41,8 @@ int main(int argc, char **argv)
 	printf("Connected to headset.\n");
 	
 	if (emokit_read_data(d)<=0) {
-		printf("Error reading from headset\n");
+		fprintf(stdout,"Error reading from headset\n");
+		fflush(stdout);
 		emokit_close(d);
 		emokit_delete(d);
 		return 1;

@@ -28,10 +28,16 @@
 #define EMOKIT_DECLSPEC __declspec(dllexport)
 #endif
 
-/// Vendor ID for all emotiv devices
-const static uint32_t EMOKIT_VID = 0x21a1;
-/// Product ID for all emotiv devices
-const static uint32_t EMOKIT_PID = 0x0001;
+
+//  idVendor           0x1234 Unknown
+//  idProduct          0xed02 Emotiv EPOC Developer Headset Wireless Dongle
+
+/// Vendor ID 
+//const static uint32_t EMOKIT_VID = 0x21a1;
+const static uint32_t EMOKIT_VID = 0x1234;
+/// Product ID 
+//const static uint32_t EMOKIT_PID = 0x0001;
+const static uint32_t EMOKIT_PID = 0xed02;
 
 /// Out endpoint for all emotiv devices
 const static uint32_t EMOKIT_OUT_ENDPT = 0x02;
